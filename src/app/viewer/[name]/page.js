@@ -2,29 +2,35 @@
 
 import { useEffect } from "react";
 import { use } from "react";
-import { MODELS } from "@/constants/view-paths.constants";
+import { MODELS_GLTF, MODELS_GLB } from "@/constants/view-paths.constants";
 
 function ViewerPage({ params }) {
   const resolvedParams = use(params);
   const { name } = resolvedParams;
+  const modelUrl = MODELS_GLTF[name].path;
 
   useEffect(() => {
     import("@google/model-viewer");
   }, []);
 
   return (
-    <div>
-      <model-viewer
-        ar
-        camera-controls
-        disable-pan
-        shadow-intensity="2"
-        ar-modes="webxr scene-viewer quick-look"
-        src={MODELS[name]}
-        alt="3D model"
-        style={{ width: "100%", height: "500px" }}
-      ></model-viewer>
-    </div>
+    modelUrl ?
+      (<div className="wrapper">
+        <model-viewer
+          ar
+          camera-controls
+          disable-pan
+          shadow-intensity="2"
+          ar-modes="webxr scene-viewer quick-look"
+          src={modelUrl}
+          alt="3D model"
+          className="model-viewer-component"
+        ></model-viewer>
+      </div >)
+      :
+      <h1 className="">
+        Error loading the 3D Model
+      </h1>
   );
 }
 
