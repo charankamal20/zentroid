@@ -2,12 +2,17 @@
 
 import { useEffect } from "react";
 import { use } from "react";
-import { MODELS_GLTF, MODELS_GLB } from "@/constants/view-paths.constants";
+import { MODELS_GLTF } from "@/constants/view-paths.constants";
+import { ChevronLeft } from "lucide-react"
 
 function ViewerPage({ params }) {
   const resolvedParams = use(params);
   const { name } = resolvedParams;
-  const modelUrl = MODELS_GLTF[name].path;
+  const modelUrl = MODELS_GLTF[name].aws_path;
+
+  const handleBackClick = () => {
+    window.location.href = '/home';
+  };
 
   useEffect(() => {
     import("@google/model-viewer");
@@ -16,6 +21,9 @@ function ViewerPage({ params }) {
   return (
     modelUrl ?
       (<div className="wrapper">
+        <button className="btn back-btn" onClick={handleBackClick}>
+          <ChevronLeft className="back-btn-icon"/> Back
+        </button>
         <model-viewer
           ar
           camera-controls
