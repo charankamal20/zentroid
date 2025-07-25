@@ -9,31 +9,33 @@ body {
   margin: 0;
   padding: 0;
   color: #fff;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100dvh;
-
-}
-
-.wrapper {
-  width: 100vw;
-  height: 90vh;
-}
-
-.model-viewer-component {
-  width: 100%;
-  height: 100%;
 }
 
 .home-container {
-  display: flex;
   width: 100%;
   height: 100%;
+  display: flex;
   background-color: black;
   text-align: center;
   overflow: hidden;
 }
+
+.wrapper {
+  width: 100vw;
+  height: 100dvh;
+}
+
+.model-viewer-component {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
 
 .linktree-container {
   max-height: 100%;
@@ -99,7 +101,6 @@ body {
   border: 2px solid yellow;
 }
 
-/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   .linktree-container {
     width: 80%;
@@ -119,7 +120,7 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 380px) {
   .home-container {
     height: 40vh;
   }

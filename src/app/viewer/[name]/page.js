@@ -21,10 +21,11 @@ function ViewerPage({ params }) {
           camera-controls
           disable-pan
           shadow-intensity="2"
-          ar-modes="webxr scene-viewer quick-look"
+          ar-modes="scene-viewer quick-look"
           src={modelUrl}
           alt="3D model"
           className="model-viewer-component"
+          scale="0.5 0.5 0.5"
         ></model-viewer>
       </div >)
       :
