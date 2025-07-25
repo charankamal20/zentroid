@@ -3,11 +3,12 @@
 import { useEffect } from "react";
 import { use } from "react";
 import { MODELS_GLTF } from "@/constants/view-paths.constants";
+import { ChevronLeft } from "lucide-react"
 
 function ViewerPage({ params }) {
   const resolvedParams = use(params);
   const { name } = resolvedParams;
-  const modelUrl = MODELS_GLTF[name].path;
+  const modelUrl = MODELS_GLTF[name].aws_path;
 
   const handleBackClick = () => {
     window.location.href = '/home';
@@ -21,10 +22,7 @@ function ViewerPage({ params }) {
     modelUrl ?
       (<div className="wrapper">
         <button className="btn back-btn" onClick={handleBackClick}>
-          <span className="material-symbols-rounded">
-            arrow_back_ios_new
-          </span>
-          Back
+          <ChevronLeft className="back-btn-icon"/> Back
         </button>
         <model-viewer
           ar
