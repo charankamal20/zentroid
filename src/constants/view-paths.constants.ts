@@ -4,30 +4,32 @@ export interface Model {
   path: string;
 }
 
+"https://kaythecosmic.github.io/zentroid-models/";
+
 export const MODELS_GLTF: Record<string, Model> = {
   almirah: {
     name: "almirah",
     label: "Almirah",
-    path: "/gltf-models/Almira/almira.gltf",
+    path: "https://kaythecosmic.github.io/zentroid-models/gltf-models/Almira/Almira.gltf",
   },
   nike: {
     name: "nike",
     label: "Nike Air DT Max 96 Colorado Away Sneakers",
-    path: "/gltf-models/Nike Air DT Max 96 Colorado Away Sneakers/Nike Air DT Max 96 Colorado Away Sneakers.gltf",
+    path: "https://kaythecosmic.github.io/zentroid-models/gltf-models/Nike%20Air%20DT%20Max%2096%20Colorado%20Away%20Sneakers/Nike%20Air%20DT%20Max%2096%20Colorado%20Away%20Sneakers.gltf",
   },
   sunglasses: {
     name: "sunglasses",
     label: "Dior Signature",
-    path: "/gltf-models/Dior signature/Dior signature.gltf",
+    path: "https://kaythecosmic.github.io/zentroid-models/gltf-models/Dior%20signature/Dior%20signature.gltf",
   },
   sunglasses2: {
     name: "sunglasses2",
     label: "Clubmaster Way",
-    path: "/gltf-models/Clubmaster Way/Clubmaster Way.gltf",
+    path: "https://kaythecosmic.github.io/zentroid-models/gltf-models/Clubmaster%20Way/Clubmaster%20Way.gltf",
   },
   watch: {
     name: "watch",
     label: "Graham Fortress City GMT Red",
-    path: "/gltf-models/Graham Watch/GRAHAM FORTRESS CITY GMT RED.gltf",
+    path: "https://kaythecosmic.github.io/zentroid-models/gltf-models/Graham%20Watch/GRAHAM%20FORTRESS%20CITY%20GMT%20RED.gltf",
   },
 };
