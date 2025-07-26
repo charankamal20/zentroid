@@ -62,13 +62,13 @@ export const LandingPage = async () => {
                   href="https://www.linkedin.com/company/zentroid-studios/"
                   target="_blank"
                 >
-                  <Linkedin size={28} />
+                  <Linkedin size={28} className="opacity-0" />
                 </Link>
                 <Link
                   href="https://www.instagram.com/zentroid.studios/"
                   target="_blank"
                 >
-                  <Instagram size={28} />
+                  <Instagram size={28} className="opacity-0" />
                 </Link>
               </div>
             </div>

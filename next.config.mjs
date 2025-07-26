@@ -15,10 +15,6 @@ const nextConfig = {
     ];
   },
   compress: true,
-  experimental: {
-    optimizeCss: true,
-  },
-
   devIndicators: false,
 };
 
