@@ -134,10 +134,11 @@ body {
 
 @media (max-width: 380px) {
   .home-container {
-    height: 40vh;
+    height: 100dvh;
   }
 
   .linktree-container {
+    margin: auto;
     width: 90%;
   }
 
