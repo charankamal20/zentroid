@@ -1,9 +1,11 @@
-import styles from "./page.module.css";
+"use server"
 
-export default function Home() {
+import { LandingPage } from "@/components/LandingPage";
+
+export default async function Home() {
   return (
-    <div className={styles.page}>
-        
-    </div>
+    <>
+      <LandingPage />
+    </>
   );
 }
