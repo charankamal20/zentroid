@@ -55,20 +55,20 @@ export const LandingPage = async () => {
               ))}
             </div>
             <hr className="bg-white w-4/6 md:w-4/6 opacity-40" />
-            <div className="flex flex-col gap-y-2 -translate-y-2">
-              <span className="my-4">Contact Us</span>
-              <div className="flex gap-x-4">
+            <div className="flex flex-col gap-y-2 -translate-y-4">
+              <span className="my-4 text-neutral-200">Contact Us</span>
+              <div className="flex justify-center gap-x-4">
                 <Link
                   href="https://www.linkedin.com/company/zentroid-studios/"
                   target="_blank"
                 >
-                  <Linkedin size={28} className="opacity-0" />
+                  <Linkedin size={24} className="text-neutral-300" />
                 </Link>
                 <Link
                   href="https://www.instagram.com/zentroid.studios/"
                   target="_blank"
                 >
-                  <Instagram size={28} className="opacity-0" />
+                  <Instagram size={24} className="text-neutral-300" />
                 </Link>
               </div>
             </div>
