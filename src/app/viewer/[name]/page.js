@@ -37,7 +37,7 @@ export default function ViewerPage({ params }) {
   }, [modelUrl]);
 
   return modelUrl ? (
-    <div className="relative w-full h-screen bg-white">
+    <div className="relative w-full h-dvh bg-white">
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <div className="h-4 w-xl flex justify-center">
@@ -51,8 +51,12 @@ export default function ViewerPage({ params }) {
         ref={modelViewerRef}
         src={modelUrl}
         alt="A 3D model"
+        shadow-intensity="1"
         ar
-        ar-modes="webxr scene-viewer quick-look"
+        touch-action="pan-y"
+        auto-rotate
+        ar-modes="scene-viewer quick-look"
+        xr-environment
         camera-controls
         loading="eager"
         style={{ width: "100%", height: "100%" }}
