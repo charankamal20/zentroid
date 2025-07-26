@@ -15,7 +15,6 @@ function page() {
             className="fab fa-linkedin fa-xl"></i></a>
         </div>
         <div className="button-list">
-
           {Object.keys(MODELS_GLTF).map((item, index) => (
             <Link key={index + MODELS_GLTF[item].name} href={'/viewer/' + MODELS_GLTF[item].name} className="btn">
               {MODELS_GLTF[item].label}

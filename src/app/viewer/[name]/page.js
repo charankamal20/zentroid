@@ -11,7 +11,7 @@ function ViewerPage({ params }) {
   const modelUrl = MODELS_GLTF[name].aws_path;
 
   const handleBackClick = () => {
-    window.location.href = '/home';
+    window.location.href = '/';
   };
 
   useEffect(() => {
