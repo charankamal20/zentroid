@@ -1,6 +1,25 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
-  devIndicators: false
+  async headers() {
+    return [
+      {
+        source: "/viewer/:path*",
+        headers: [
+          {
+            key: "Link",
+            value: "</api/preload>; rel=preload; as=script",
+          },
+        ],
+      },
+    ];
+  },
+  compress: true,
+  experimental: {
+    optimizeCss: true,
+  },
+
+  devIndicators: false,
 };
 
 export default nextConfig;
