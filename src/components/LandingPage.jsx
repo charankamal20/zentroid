@@ -1,5 +1,6 @@
 "use server";
 
+import { cn } from "@/lib/utils";
 import { MODELS_GLTF } from "@/constants/view-paths.constants";
 import { Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
@@ -14,6 +15,16 @@ export const LandingPage = async () => {
 
   return (
     <div className="h-screen w-full flex flex-col items-center">
+      <div
+        className={cn(
+          "-z-10 absolute inset-0",
+          "[background-size:20px_20px]",
+          "[background-image:radial-gradient(#404040_1px,transparent_1px)]"
+        )}
+      />
+      {/* Radial gradient for the container to give a faded look */}
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_60%,black)] bg-black"></div>
+
       <div className="mx-auto px-8 h-full  w-full md:w-1/3 md:px-4 max-w-xl">
         <div className="gap-y-8 w-full flex flex-col items-center justify-center h-full">
           <div className="">
