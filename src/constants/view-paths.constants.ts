@@ -55,7 +55,7 @@ export const MODELS_GLTF: Record<string, Model> = {
     name: "diamond",
     label: "Diamond",
     path: "https://kaythecosmic.github.io/zentroid-models/gltf-models/Graham%20Watch/GRAHAM%20FORTRESS%20CITY%20GMT%20RED.gltf",
-    gltf_path: "https://d3tz76b3tjibkh.cloudfront.net/diamond.glb",
-    aws_path: "https://d3tz76b3tjibkh.cloudfront.net/diamond.glb",
+    gltf_path: "https://zentroid.s3.eu-north-1.amazonaws.com/diamond.glb",
+    aws_path: "https://zentroid.s3.eu-north-1.amazonaws.com/diamond.glb",
   },
 };
