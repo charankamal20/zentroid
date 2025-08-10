@@ -51,4 +51,11 @@ export const MODELS_GLTF: Record<string, Model> = {
       "https://d3tz76b3tjibkh.cloudfront.net/gltf-models/Graham%20Watch/GRAHAM%20FORTRESS%20CITY%20GMT%20RED.gltf",
     aws_path: "https://d3tz76b3tjibkh.cloudfront.net/glb/graham-processed.glb",
   },
+  diamond: {
+    name: "diamond",
+    label: "Diamond",
+    path: "https://kaythecosmic.github.io/zentroid-models/gltf-models/Graham%20Watch/GRAHAM%20FORTRESS%20CITY%20GMT%20RED.gltf",
+    gltf_path: "https://d3tz76b3tjibkh.cloudfront.net/diamond.glb",
+    aws_path: "https://d3tz76b3tjibkh.cloudfront.net/diamond.glb",
+  },
 };
