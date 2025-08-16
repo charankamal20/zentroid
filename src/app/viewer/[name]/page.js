@@ -52,14 +52,16 @@ export default function ViewerPage({ params }) {
         src={modelUrl}
         alt="A 3D model"
         shadow-intensity="1"
+        environment-image="/studio.hdr"
         ar
+        skybox-image="/studio.hdr"
         touch-action="pan-y"
         auto-rotate
         ar-modes="scene-viewer quick-look"
         xr-environment
         camera-controls
         loading="eager"
-        style={{ width: "100%", height: "100%" }}
+        style={{ width: "100%", height: "100%", "backgroundColor": "unset" }}
       ></model-viewer>
       <button onClick={handleBackClick} className="absolute top-4 left-4 z-20">
         <ChevronLeft size={32} className="text-black" />
