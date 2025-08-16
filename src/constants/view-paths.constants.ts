@@ -4,6 +4,8 @@ export interface Model {
   path: string;
   aws_path: string;
   gltf_path: string;
+  environment_image_path?: string;
+  exposure?: number;
 }
 
 // ("https://kaythecosmic.github.io/zentroid-models/");
@@ -57,5 +59,7 @@ export const MODELS_GLTF: Record<string, Model> = {
     path: "https://kaythecosmic.github.io/zentroid-models/gltf-models/Graham%20Watch/GRAHAM%20FORTRESS%20CITY%20GMT%20RED.gltf",
     gltf_path: "https://zentroid.s3.eu-north-1.amazonaws.com/diamond.glb",
     aws_path: "https://zentroid.s3.eu-north-1.amazonaws.com/diamond.glb",
+    environment_image_path: "/studio.hdr",
+    exposure:1.2
   },
 };

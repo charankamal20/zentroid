@@ -7,7 +7,8 @@ import { useRef, useEffect, useState, use } from "react";
 export default function ViewerPage({ params }) {
   const args = use(params);
   const { name } = args;
-  const modelUrl = MODELS_GLTF[name].aws_path;
+  const model = MODELS_GLTF[name];
+  const modelUrl = model.aws_path;
   const modelViewerRef = useRef(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -28,7 +29,7 @@ export default function ViewerPage({ params }) {
         setIsLoading(false);
       } else {
         modelViewer.addEventListener("load", handleLoad);
-        modelViewer.exposure = 1.2;
+        modelViewer.exposure = model?.exposure;
       }
     }
     // Clean-up on unmount
@@ -52,7 +53,7 @@ export default function ViewerPage({ params }) {
         ref={modelViewerRef}
         src={modelUrl}
         alt="A 3D model"
-        environment-image="/studio.hdr"
+        environment-image={model?.environment_image_path}
         shadow-intensity="1"
         ar
         auto-rotate
@@ -64,7 +65,7 @@ export default function ViewerPage({ params }) {
         loading="eager"
         style={{ width: "100%", height: "100%", backgroundColor: "unset" }}
       ></model-viewer>
-      <button onClick={handleBackClick} className="absolute top-4 left-4 z-20">
+      <button onClick={handleBackClick} className="absolute top-4 left-4 z-20 cursor-pointer">
         <ChevronLeft size={32} className="text-black" />
       </button>
     </div>
