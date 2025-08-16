@@ -28,6 +28,7 @@ export default function ViewerPage({ params }) {
         setIsLoading(false);
       } else {
         modelViewer.addEventListener("load", handleLoad);
+        modelViewer.exposure = 1.2;
       }
     }
     // Clean-up on unmount
@@ -51,17 +52,17 @@ export default function ViewerPage({ params }) {
         ref={modelViewerRef}
         src={modelUrl}
         alt="A 3D model"
-        shadow-intensity="1"
         environment-image="/studio.hdr"
+        shadow-intensity="1"
         ar
-        skybox-image="/studio.hdr"
-        touch-action="pan-y"
         auto-rotate
+        disable-tap
+        touch-action="pan-y"
         ar-modes="scene-viewer quick-look"
         xr-environment
         camera-controls
         loading="eager"
-        style={{ width: "100%", height: "100%", "backgroundColor": "unset" }}
+        style={{ width: "100%", height: "100%", backgroundColor: "unset" }}
       ></model-viewer>
       <button onClick={handleBackClick} className="absolute top-4 left-4 z-20">
         <ChevronLeft size={32} className="text-black" />
