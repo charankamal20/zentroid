@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 * {
   font-family: var(--font-urbanist), sans-serif;
   margin: 0px;
@@ -77,6 +79,9 @@ body {
 }
 
 .button-list {
+  padding-top: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -85,12 +90,12 @@ body {
 .btn {
   background-color: yellow;
   color: black;
-  padding: 18px;
+  padding: 16px;
   text-align: center;
   text-decoration: none;
   border-radius: 30px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   border: 2px solid yellow;
   transition: all 0.3s ease;
 }
@@ -159,4 +164,28 @@ body {
     width: 150px;
     margin-bottom: 20px;
   }
+}
+
+/* Minimal Progress */
+.minimal-progress {
+  width: 80px;
+  height: 1px;
+  background: #e8e8e8;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-line {
+  position: absolute;
+  top: 0;
+  left: -80px;
+  width: 40px;
+  height: 100%;
+  background: #1a1a1a;
+  animation: progress-move 2s ease-in-out infinite;
+}
+
+@keyframes progress-move {
+  0% { left: -80px; }
+  100% { left: 80px; }
 }
