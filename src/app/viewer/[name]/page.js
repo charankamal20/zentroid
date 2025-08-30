@@ -42,9 +42,14 @@ export default function ViewerPage({ params }) {
     <div className="relative w-full h-dvh bg-white">
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center z-10">
-          <div className="h-4 w-xl flex justify-center">
-            <div className="minimal-progress">
-              <div className="progress-line"></div>
+          <div className="flex flex-col gap-4 justify-center">
+            <div className="text-neutral-800 max-w-52 font-light animate-pulse text-center py-16">
+              Please wait while we are loading the best quality model for you.
+            </div>
+            <div className="h-4 flex justify-center">
+              <div className="minimal-progress">
+                <div className="progress-line"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -52,11 +57,10 @@ export default function ViewerPage({ params }) {
       <model-viewer
         ref={modelViewerRef}
         src={modelUrl}
-        alt="A 3D model"
+        alt="3D model"
         environment-image={model?.environment_image_path}
         shadow-intensity="1"
         ar
-        auto-rotate
         disable-tap
         touch-action="pan-y"
         ar-modes="scene-viewer quick-look"
@@ -65,7 +69,10 @@ export default function ViewerPage({ params }) {
         loading="eager"
         style={{ width: "100%", height: "100%", backgroundColor: "unset" }}
       ></model-viewer>
-      <button onClick={handleBackClick} className="absolute top-4 left-4 z-20 cursor-pointer">
+      <button
+        onClick={handleBackClick}
+        className="absolute top-4 left-4 z-20 cursor-pointer"
+      >
         <ChevronLeft size={32} className="text-black" />
       </button>
     </div>
